@@ -27,6 +27,32 @@
       animation: bounce 1s ease infinite;
     }
 
+    /* Typing Animation */
+    @keyframes typing {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .typing-text {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid;
+      width: 0;
+      animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+    }
+
+    /* Cursor Blink Animation */
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
     #about {
       background-color: #0d6efd; /* Ensures a blue background */
     }
@@ -71,11 +97,13 @@
   </div>
 </header>
 
-<!-- About Section (No Animation) -->
-<section id="about" class="vh-100 d-flex align-items-center bg-primary text-white">
+<!-- About Section -->
+<section id="about" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white">
   <div class="container text-center">
     <h2 class="mb-4">About Me</h2>
-    <p class="lead">I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.</p>
+    <p class="lead typing-text">
+      I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.
+    </p>
   </div>
 </section>
 
