@@ -10,6 +10,16 @@
     #typed {
       color: #ffd166;
     }
+
+    .emoji-bounce {
+      display: inline-block;
+      animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
@@ -36,7 +46,7 @@
 <header id="home" class="vh-100 d-flex align-items-center text-white bg-gradient">
   <div class="container text-center">
     <h1 class="display-4 animate fade-in-up">
-      Hi, I'm <span id="typed"></span>
+      Hi, I'm <span id="typed"></span> <span class="emoji-bounce">🚀</span>
     </h1>
     <p class="lead animate fade-in-up delay-1">I build sleek, responsive websites with modern tech</p>
     <a href="#projects" class="btn btn-outline-light btn-lg mt-3 animate fade-in-up delay-2">See My Work</a>
