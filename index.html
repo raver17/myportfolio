@@ -29,12 +29,8 @@
 
     /* Typing Animation */
     @keyframes typing {
-      0% {
-        width: 0;
-      }
-      100% {
-        width: 100%;
-      }
+      0% { width: 0; }
+      100% { width: 100%; }
     }
 
     .typing-text-line-1 {
@@ -52,61 +48,56 @@
       white-space: nowrap;
       border-right: 4px solid;
       width: 0;
-      animation: typing 10s steps(80) 11s forwards, blink 0.75s step-end infinite; /* Delay for 10s */
+      animation: typing 10s steps(80) 11s forwards, blink 0.75s step-end infinite;
     }
 
-    /* Cursor Blink Animation */
     @keyframes blink {
-      50% {
-        border-color: transparent;
-      }
+      50% { border-color: transparent; }
     }
 
     /* Projects Section Styling */
     #projects {
-      background-color: #f8f9fa; /* Light background for better contrast */
-      color: #333; /* Dark text color for contrast */
+      background-color: #f8f9fa;
+      color: #333;
     }
 
     .card {
-      background-color: #fff; /* White background for project cards */
-      color: #333; /* Dark text inside cards */
-      border: 1px solid #ddd; /* Border for cards */
-      border-radius: 8px; /* Rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
-      transition: transform 0.3s ease; /* Animation for hover */
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px); /* Slight lift effect on hover */
+      transform: translateY(-5px);
     }
 
     .card-title {
-      color: #0d6efd; /* Blue title for better visibility */
+      color: #0d6efd;
     }
 
     .card-text {
-      color: #6c757d; /* Lighter text for the project description */
+      color: #6c757d;
     }
 
     .card a {
-      color: #0d6efd; /* Blue links inside cards */
+      color: #0d6efd;
     }
 
     .card a:hover {
-      color: #0056b3; /* Darker blue on hover */
+      color: #0056b3;
     }
 
-    /* Ensure cards display properly within the container */
     .card-body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
-    /* About Section Styling */
     #about {
-      background-color: #0d6efd; /* Ensures a blue background */
+      background-color: #0d6efd;
     }
 
     #about h2 {
@@ -168,7 +159,7 @@
     <h2 class="text-center mb-4">My Projects</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card h-100 shadow animate fade-in-up">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Portfolio Website</h5>
             <p class="card-text">A responsive multi-page portfolio built using HTML, CSS, JS, and Bootstrap with animations.</p>
@@ -177,7 +168,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow animate fade-in-up">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">E-commerce Website</h5>
             <p class="card-text">A fully functional e-commerce website with payment integration and user accounts.</p>
@@ -186,7 +177,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow animate fade-in-up">
+        <div class="card h-100 shadow">
           <div class="card-body">
             <h5 class="card-title">Blog Website</h5>
             <p class="card-text">A dynamic blog platform with user-generated content and interactive comments.</p>
