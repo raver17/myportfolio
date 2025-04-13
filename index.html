@@ -7,10 +7,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Hero Section Animations */
+    /* Animations */
     @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes bounce {
@@ -19,13 +25,23 @@
       100% { transform: translateY(0); }
     }
 
-    /* Apply Animation to Hero Section */
     .hero-text {
       animation: fadeInUp 1.5s ease-out;
     }
 
     .hero-btn {
       animation: bounce 1s ease infinite;
+    }
+
+    /* Section Scroll Animation */
+    .section-animate {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease-out;
+    }
+
+    .section-animate.visible {
+      animation: fadeInUp 1s forwards;
     }
   </style>
 </head>
@@ -59,20 +75,20 @@
 </header>
 
 <!-- About Section -->
-<section id="about" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white">
+<section id="about" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white section-animate">
   <div class="container text-center">
     <h2 class="mb-4">About Me</h2>
     <p class="lead">I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.</p>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="vh-100 d-flex align-items-center bg-light">
+<!-- Projects Section -->
+<section id="projects" class="vh-100 d-flex align-items-center bg-light section-animate">
   <div class="container">
     <h2 class="text-center mb-4">My Projects</h2>
     <div class="row g-4">
       <div class="col-md-4">
-        <div class="card h-100 shadow animate fade-in-up">
+        <div class="card h-100 shadow fade-in-up">
           <div class="card-body">
             <h5 class="card-title">Portfolio Website</h5>
             <p class="card-text">A responsive multi-page portfolio built using HTML, CSS, JS, and Bootstrap with animations.</p>
@@ -85,8 +101,8 @@
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white">
+<!-- Contact Section -->
+<section id="contact" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white section-animate">
   <div class="container">
     <h2 class="text-center mb-4">Contact Me</h2>
     <form class="mx-auto" style="max-width: 600px;" action="https://formsubmit.co/paulo.nextvas2024@gmail.com" method="POST">
@@ -118,6 +134,24 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Reveal sections on scroll
+  const sections = document.querySelectorAll('.section-animate');
+
+  const revealOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < triggerBottom) {
+        section.classList.add('visible');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+  window.addEventListener('load', revealOnScroll);
+</script>
 <script src="script.js"></script>
 </body>
 </html>
