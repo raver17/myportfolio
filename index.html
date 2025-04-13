@@ -29,18 +29,31 @@
 
     /* About section: Darker blue */
     #about {
+      height: 100vh;
+      display: flex;
+      align-items: center; /* Vertically centers the content */
+      justify-content: center; /* Horizontally centers the content */
       background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 100%);
     }
 
     /* Projects Section */
     #projects {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: linear-gradient(135deg, #0093e9 0%, #80d0c7 100%);
     }
 
     /* Contact section */
     #contact {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: linear-gradient(135deg, #004e92 0%, #000428 100%);
     }
+
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
@@ -75,17 +88,17 @@
 </header>
 
 <!-- About Section -->
-<section id="about" class="py-5 text-white">
+<section id="about">
   <div class="container text-center">
-    <h2 class="mb-4">About Me</h2>
-    <p class="lead">I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.</p>
+    <h2 class="mb-4 text-white">About Me</h2>
+    <p class="lead text-white">I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.</p>
   </div>
 </section>
 
-<!-- Projects -->
-<section id="projects" class="py-5 text-white">
-  <div class="container">
-    <h2 class="text-center mb-4">My Projects</h2>
+<!-- Projects Section -->
+<section id="projects">
+  <div class="container text-center">
+    <h2 class="text-white mb-4">My Projects</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card h-100 shadow animate fade-in-up">
@@ -101,10 +114,10 @@
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact" class="py-5 text-white">
-  <div class="container">
-    <h2 class="text-center mb-4">Contact Me</h2>
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container text-center">
+    <h2 class="text-white mb-4">Contact Me</h2>
     <form class="mx-auto" style="max-width: 600px;">
       <div class="mb-3">
         <label>Name</label>
