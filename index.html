@@ -71,6 +71,14 @@
     .card {
       background-color: #fff; /* White background for project cards */
       color: #333; /* Dark text inside cards */
+      border: 1px solid #ddd; /* Border for cards */
+      border-radius: 8px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+      transition: transform 0.3s ease; /* Animation for hover */
+    }
+
+    .card:hover {
+      transform: translateY(-5px); /* Slight lift effect on hover */
     }
 
     .card-title {
@@ -87,6 +95,13 @@
 
     .card a:hover {
       color: #0056b3; /* Darker blue on hover */
+    }
+
+    /* Ensure cards display properly within the container */
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     /* About Section Styling */
@@ -161,7 +176,24 @@
           </div>
         </div>
       </div>
-      <!-- Add more project cards here -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow animate fade-in-up">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Website</h5>
+            <p class="card-text">A fully functional e-commerce website with payment integration and user accounts.</p>
+            <a href="#" class="btn btn-outline-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow animate fade-in-up">
+          <div class="card-body">
+            <h5 class="card-title">Blog Website</h5>
+            <p class="card-text">A dynamic blog platform with user-generated content and interactive comments.</p>
+            <a href="#" class="btn btn-outline-primary">View Project</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
