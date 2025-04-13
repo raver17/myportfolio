@@ -21,22 +21,19 @@
       50% { transform: translateY(-8px); }
     }
 
-    /* Hero section: Vibrant Blue Gradient with consistent height */
     #home {
-      height: 100vh; /* Full viewport height */
+      height: 100vh;
       background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     }
 
-    /* About section: Darker blue */
     #about {
       height: 100vh;
       display: flex;
-      align-items: center; /* Vertically centers the content */
-      justify-content: center; /* Horizontally centers the content */
+      align-items: center;
+      justify-content: center;
       background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 100%);
     }
 
-    /* Projects Section */
     #projects {
       height: 100vh;
       display: flex;
@@ -45,7 +42,6 @@
       background: linear-gradient(135deg, #0093e9 0%, #80d0c7 100%);
     }
 
-    /* Contact section */
     #contact {
       height: 100vh;
       display: flex;
@@ -53,7 +49,6 @@
       justify-content: center;
       background: linear-gradient(135deg, #004e92 0%, #000428 100%);
     }
-
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
@@ -118,18 +113,23 @@
 <section id="contact">
   <div class="container text-center">
     <h2 class="text-white mb-4">Contact Me</h2>
-    <form class="mx-auto" style="max-width: 600px;">
+    <form action="https://formsubmit.co/paulo.nextvas2024@gmail.com" method="POST" class="mx-auto" style="max-width: 600px;">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_subject" value="New message from portfolio!">
+      <input type="hidden" name="_next" value="https://yourusername.github.io/thank-you.html">
+      
       <div class="mb-3">
-        <label>Name</label>
-        <input type="text" class="form-control" required />
+        <label class="text-white">Name</label>
+        <input type="text" name="name" class="form-control" required />
       </div>
       <div class="mb-3">
-        <label>Email</label>
-        <input type="email" class="form-control" required />
+        <label class="text-white">Email</label>
+        <input type="email" name="email" class="form-control" required />
       </div>
       <div class="mb-3">
-        <label>Message</label>
-        <textarea class="form-control" rows="5" required></textarea>
+        <label class="text-white">Message</label>
+        <textarea name="message" class="form-control" rows="5" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary w-100">Send</button>
     </form>
@@ -142,9 +142,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
-
-<!-- Typing Animation Script -->
 <script>
 const text = ["a Web Developer", "a Creative Coder", "passionate about UI/UX"];
 let i = 0, j = 0, isDeleting = false;
@@ -168,6 +165,5 @@ function type() {
 }
 document.addEventListener("DOMContentLoaded", type);
 </script>
-
 </body>
 </html>
