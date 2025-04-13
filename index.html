@@ -6,50 +6,6 @@
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    #typed {
-      color: #ffd166;
-    }
-
-    .emoji-bounce {
-      display: inline-block;
-      animation: bounce 1.2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    #home {
-      height: 100vh;
-      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    }
-
-    #about {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 100%);
-    }
-
-    #projects {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0093e9 0%, #80d0c7 100%);
-    }
-
-    #contact {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #004e92 0%, #000428 100%);
-    }
-  </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
 
@@ -72,28 +28,26 @@
 </nav>
 
 <!-- Hero Section -->
-<header id="home" class="vh-100 d-flex align-items-center text-white">
+<header id="home" class="vh-100 d-flex align-items-center text-white" style="background-color: #0d6efd;">
   <div class="container text-center">
-    <h1 class="display-4 animate fade-in-up">
-      Hi, I'm <span id="typed"></span> <span class="emoji-bounce">🚀</span>
-    </h1>
-    <p class="lead animate fade-in-up delay-1">I build sleek, responsive websites with modern tech</p>
+    <h1 class="display-3 animate fade-in-up">Hi, I'm a Web Developer 👨‍💻</h1>
+    <p class="lead animate fade-in-up delay-1">I build sleek, responsive websites with modern tech ✨</p>
     <a href="#projects" class="btn btn-outline-light btn-lg mt-3 animate fade-in-up delay-2">See My Work</a>
   </div>
 </header>
 
 <!-- About Section -->
-<section id="about">
+<section id="about" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white">
   <div class="container text-center">
-    <h2 class="mb-4 text-white">About Me</h2>
-    <p class="lead text-white">I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.</p>
+    <h2 class="mb-4">About Me</h2>
+    <p class="lead">I'm a passionate front-end developer with experience in HTML, CSS, JS, and Bootstrap. I love building beautiful, user-friendly websites with clean code and smooth animations.</p>
   </div>
 </section>
 
-<!-- Projects Section -->
-<section id="projects">
-  <div class="container text-center">
-    <h2 class="text-white mb-4">My Projects</h2>
+<!-- Projects -->
+<section id="projects" class="vh-100 d-flex align-items-center bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">My Projects</h2>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="card h-100 shadow animate fade-in-up">
@@ -109,29 +63,29 @@
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact">
-  <div class="container text-center">
-    <h2 class="text-white mb-4">Contact Me</h2>
-    <form action="https://formsubmit.co/paulo.nextvas2024@gmail.com" method="POST" class="mx-auto" style="max-width: 600px;">
+<!-- Contact -->
+<section id="contact" class="vh-100 d-flex align-items-center bg-primary bg-opacity-75 text-white">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Me</h2>
+    <form class="mx-auto" style="max-width: 600px;" action="https://formsubmit.co/paulo.nextvas2024@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="box">
       <input type="hidden" name="_subject" value="New message from portfolio!">
-      <input type="hidden" name="https://raver17.github.io/myportfolio/#home" value="https://raver17/thank-you.html">
-      
+      <input type="hidden" name="_next" value="https://raver17.github.io/myportfolio/thank-you.html">
+
       <div class="mb-3">
-        <label class="text-white">Name</label>
+        <label>Name</label>
         <input type="text" name="name" class="form-control" required />
       </div>
       <div class="mb-3">
-        <label class="text-white">Email</label>
+        <label>Email</label>
         <input type="email" name="email" class="form-control" required />
       </div>
       <div class="mb-3">
-        <label class="text-white">Message</label>
+        <label>Message</label>
         <textarea name="message" class="form-control" rows="5" required></textarea>
       </div>
-      <button type="submit" class="btn btn-primary w-100">Send</button>
+      <button type="submit" class="btn btn-light w-100">Send</button>
     </form>
   </div>
 </section>
@@ -142,28 +96,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-const text = ["a Web Developer", "a Creative Coder", "passionate about UI/UX"];
-let i = 0, j = 0, isDeleting = false;
-
-function type() {
-  const typed = document.getElementById("typed");
-  const current = text[i];
-  
-  typed.textContent = current.substring(0, j);
-
-  if (!isDeleting && j < current.length) {
-    j++;
-  } else if (isDeleting && j > 0) {
-    j--;
-  } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) i = (i + 1) % text.length;
-  }
-
-  setTimeout(type, isDeleting ? 50 : 120);
-}
-document.addEventListener("DOMContentLoaded", type);
-</script>
+<script src="script.js"></script>
 </body>
 </html>
